@@ -1,0 +1,26 @@
+{
+  "name": "winnersauto",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "run:server": "node ./src/index.js",
+    "run:worker": "node ./src/index-worker.js",
+    "start": "concurrently yarn:run:*",
+    "migration:generate": "node migration generate",
+    "migration:run": "node migration run",
+    "migration:revert": "node migration revert"
+  },
+  "resolutions": {
+    "tslib": "1.11.2"
+  },
+  "dependencies": {
+    "@vendure/admin-ui-plugin": "0.15.1",
+    "@vendure/asset-server-plugin": "0.15.1",
+    "@vendure/core": "0.15.1",
+    "@vendure/email-plugin": "0.15.1",
+    "sqlite3": "5.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "5.3.0"
+  }
+}
